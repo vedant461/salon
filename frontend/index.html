@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Mud | Brutalist Salon</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        bgPrimary: '#F5F4EF',
+                        textPrimary: '#111111',
+                        borderSubtle: 'rgba(17, 17, 17, 0.12)',
+                        accentMuted: '#33322E',
+                        bgDark: '#121212',
+                        textDark: '#F5F4EF'
+                    },
+                    fontFamily: {
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                        mono: ['"Space Mono"', 'monospace'],
+                    },
+                    fontSize: {
+                        'hero': 'clamp(3.5rem, 8vw, 8.5rem)',
+                        'h1': 'clamp(2.5rem, 5vw, 5rem)',
+                        'h2': 'clamp(1.8rem, 3.5vw, 3.2rem)',
+                        'body': '1rem',
+                        'label': '0.75rem',
+                    }
+                }
+            }
+        }
+    </script>
+  </head>
+  <body class="font-display antialiased w-full selection:bg-textPrimary selection:text-bgPrimary">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

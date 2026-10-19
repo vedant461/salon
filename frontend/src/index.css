@@ -1,0 +1,158 @@
+/* Core Variables & Resets */
+:root {
+  --bg-color: #F5F4EF;
+  --text-color: #111111;
+  --border-color: rgba(17, 17, 17, 0.12);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  cursor: none;
+  /* Hide default cursor for custom follower */
+  overflow-x: hidden;
+}
+
+/* Brutalist Grid Lines */
+.grid-border-b {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.grid-border-t {
+  border-top: 1px solid var(--border-color);
+}
+
+.grid-border-r {
+  border-right: 1px solid var(--border-color);
+}
+
+.grid-border-l {
+  border-left: 1px solid var(--border-color);
+}
+
+.dark .grid-border-b,
+.dark .grid-border-t,
+.dark .grid-border-r,
+.dark .grid-border-l {
+  border-color: rgba(245, 244, 239, 0.15);
+}
+
+/* Typography Utilities */
+.mono-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Image Cards & Hover Effects */
+.media-card {
+  overflow: hidden;
+  position: relative;
+}
+
+.media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-out-expo);
+}
+
+.media-card:hover img {
+  transform: scale(1.04);
+}
+
+/* Interactive Buttons */
+.btn-brutal {
+  border: 1px solid var(--text-color);
+  transition: all 0.4s var(--ease-out-expo);
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-brutal:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.dark .btn-brutal {
+  border-color: var(--text-color);
+}
+
+/* Custom Cursor */
+#cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s var(--ease-out-expo), height 0.3s var(--ease-out-expo), background-color 0.3s;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+#cursor-follower.hover-active {
+  width: 64px;
+  height: 64px;
+  background-color: #fff;
+}
+
+/* Reveal Animations */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s var(--ease-out-expo);
+}
+
+.reveal-up.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+/* Form Styling */
+input,
+textarea,
+select {
+  background: transparent;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 0;
+  outline: none;
+  padding: 1rem 0;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--text-color);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+}
