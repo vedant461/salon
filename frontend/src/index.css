@@ -4,6 +4,28 @@
   --text-color: #111111;
   --border-color: rgba(17, 17, 17, 0.12);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --card: #FFFFFF;
+  --card-foreground: #111111;
+  --secondary: #E9E7DF;
+  --secondary-foreground: #111111;
+  --muted: #E2DFD6;
+  --muted-foreground: #666666;
+  --ring: #111111;
+}
+
+.dark {
+  --bg-color: #121212;
+  --text-color: #F5F4EF;
+  --border-color: rgba(245, 244, 239, 0.15);
+
+  --card: #1A1A1A;
+  --card-foreground: #F5F4EF;
+  --secondary: #2A2A2A;
+  --secondary-foreground: #F5F4EF;
+  --muted: #242424;
+  --muted-foreground: #999999;
+  --ring: #F5F4EF;
 }
 
 body {

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Header() {
   return (
-    <header className="fixed top-0 w-full z-50 backdrop-blur-md bg-bgPrimary/70 grid-border-b px-6 py-4 flex justify-between items-center transition-colors duration-300">
+    <header className="fixed top-0 left-0 w-full z-[100] backdrop-blur-md bg-bgPrimary/70 grid-border-b px-6 py-4 flex justify-between items-center transition-colors duration-300">
       <div className="mono-label font-bold tracking-widest text-lg cursor-hover">
         MORE MUD.
       </div>
