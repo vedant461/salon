@@ -20,7 +20,8 @@ export default function Booking() {
     e.preventDefault();
     try {
       // Optional backend API ping if server is running
-      await fetch('/api/book', {
+      const apiUrl = import.meta.env.VITE_API_URL || '';
+      await fetch(`${apiUrl}/api/book`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

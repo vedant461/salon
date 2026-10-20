@@ -1,4 +1,5 @@
 import React from 'react';
+import heroImage from '@/assets/9b705e8225fd4ecb8cc788ea819393ea.webp';
 
 export default function Hero() {
   return (
@@ -22,7 +23,7 @@ export default function Hero() {
         </div>
         <div className="w-full h-full min-h-[50vh] media-card">
           <img
-            src="/9b705e8225fd4ecb8cc788ea819393ea.webp"
+            src={heroImage}
             alt="Hero Editorial Image"
             className="parallax-img"
             data-speed="0.05"
